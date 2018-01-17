@@ -1,0 +1,43 @@
+---
+output: pdf_document
+graphics: yes
+header-includes:
+    - \usepackage{tabu}
+    - \usepackage{amssymb, amsmath, amsthm}
+    - \usepackage{enumerate}
+    - \renewcommand{\P}{\textrm{P}}
+    - \newcommand{\R}{\mathbb{R}}
+    - \newcommand{\E}{\mathbb{E}}
+    - \newcommand{\var}{{\rm Var}}
+    - \newcommand{\cov}{{\rm Cov}}
+    - \newcommand{\iid}{\stackrel{iid}{\sim}}
+    - \newcommand{\N}{\mathcal{N}}
+---
+\noindent \begin{tabu} to \textwidth {@{}X[4 l] @{}X[r]}
+  \textbf{Project 1} 	       & \\ 
+  \textbf{MFE 405: Computational Finance} & \\ 
+  \textbf{Yiyuan Tu Samuel} & \\ 
+  \textbf{Professor Goukasian}		   & 
+\end{tabu}
+
+This is the histogram pdf
+
+
+
+
+```{r}
+# 405 HW
+# Question 2 histogram
+q2_data = read.table("/Users/samueltu/Desktop/Winter_2018/405_ComputFin/Week1/q2.csv")
+hist(q2_data[,1])
+
+# Question 3 histogram
+q3_data = read.table("/Users/samueltu/Desktop/Winter_2018/405_ComputFin/Week1/q3.csv")
+hist(q3_data[,1])
+# Theoretical Value
+sum(dbinom(x = 40:44, size = 44, prob = 0.64))
+
+q4_data = read.table("/Users/samueltu/Desktop/Winter_2018/405_ComputFin/Week1/q4.csv")
+hist(q4_data[,1])
+```
+
